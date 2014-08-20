@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ery xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2014-07-23T10:06:55Z" yahoo:lang="en-US">
+    quote symbol="^GSPC">
+            <Symmbol>30pm</LastTradeTime>
+            <Change>+9.90</Change>
+            <Open.65</Open>
+            <DaysHigh>1986.24/DaysLow>
+            <Vol52</Volume>
+    resry>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+
+
+<!-- 	<bean name="fileCsvExchangesJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.ExchangesJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="exchangeMsgGateway" value-ref="fileCsvExchangeScaledRiskGateway" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean name="fileCsvStocksJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" value="com.finaxys.rd.dataextraction.job.StocksJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="stockMsgGateway" value-ref="fileCsvStockScaledRiskGateway" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean name="fileCsvIndexInfosJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.IndexInfosJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="indexInfoMsgGateway" value-ref="fileCsvIndexInfoScaledRiskGateway" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean name="fileCsvInterbankRatesJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.InterbankRatesJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="interbankRateMsgGateway" value-ref="fileCsvInterbankRateScaledRiskGateway" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean name="fileCsvHistInterbankRateDataJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.HistInterbankRateDataJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="histInterbankRateDataMsgGateway" value-ref="fileCsvHistInterbankRateDataScaledRiskGateway" /> -->
+<!-- 				<entry key="year" value="2014" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean name="yahooCsvFXRatesJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" value="com.finaxys.rd.dataextraction.job.FXRatesJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="fxRatesMsgGateway" value-ref="yahooCsvFXRateScaledRiskGateway" /> -->
+<!-- 				<entry key="currencyPairDao" value-ref="currencyPairDao" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean name="yahooCsvIndexQuotesJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.IndexQuotesJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="indexQuoteMsgGateway" value-ref="yahooCsvIndexQuoteScaledRiskGateway" /> -->
+<!-- 				<entry key="indexInfoDao" value-ref="indexInfoDao" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean name="yahooCsvStockQuotesJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.StockQuotesJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="stockQuoteMsgGateway" value-ref="yahooCsvStockQuoteScaledRiskGateway" /> -->
+<!-- 				<entry key="stockDao" value-ref="stockDao" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean name="ebfCsvHistInterbankRateDataJobDetail" -->
+<!-- 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean"> -->
+
+<!-- 		<property name="jobClass" -->
+<!-- 			value="com.finaxys.rd.dataextraction.job.HistInterbankRateDataJob" /> -->
+
+<!-- 		<property name="jobDataAsMap"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="histInterbankRateDataMsgGateway" value-ref="ebfCsvHistInterbankRateDataScaledRiskGateway" /> -->
+<!-- 				<entry key="year" value="2014" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="durability" value="true" /> -->
+<!-- 	</bean> -->
+
+
+
+
+
+
+
+<!-- 	<bean id="fileCsvExchangesTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="fileCsvExchangesJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.file_xml_exchanges.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.file_xml_exchanges.start_delay}" /> -->
+
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvStocksTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="fileCsvStocksJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.file_xml_stocks.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.file_xml_stocks.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvIndexInfosTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="fileCsvIndexInfosJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.file_xml_index_infos.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.file_xml_index_infos.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvInterbankRatesTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="fileCsvInterbankRatesJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.file_xml_interbank_rates.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.file_xml_interbank_rates.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvHistInterbankRateDataTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="fileCsvHistInterbankRateDataJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.file_xml_hist_interbank_rate_data.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.file_xml_hist_interbank_rate_data.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvFXRatesTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="yahooCsvFXRatesJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_fx_rates.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_fx_rates.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvIndexQuotesTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="yahooCsvIndexQuotesJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_index_quotes.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_index_quotes.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvStockQuotesTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="yahooCsvStockQuotesJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_stock_quotes.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.yahoo_xml_stock_quotes.start_delay}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="ebfCsvHistInterbankRateDataTrigger" -->
+<!-- 		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="ebfCsvHistInterbankRateDataJobDetail" /> -->
+<!-- 		<property name="repeatInterval" -->
+<!-- 			value="${app.quartz.trigger.ebf_xml_hist_interbank_rate_data.repeat_interval}" /> -->
+<!-- 		<property name="startDelay" -->
+<!-- 			value="${app.quartz.trigger.ebf_xml_hist_interbank_rate_data.start_delay}" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> -->
+<!-- 		<property name="configLocation" value="classpath:quartz.properties" /> -->
+<!-- 		<property name="jobDetails"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="fileCsvExchangesJobDetail" /> -->
+<!-- 				<ref bean="fileCsvStocksJobDetail" /> -->
+<!-- 				<ref bean="fileCsvIndexInfosJobDetail" /> -->
+<!-- 				<ref bean="fileCsvInterbankRatesJobDetail" /> -->
+<!-- 				<ref bean="fileCsvHistInterbankRateDataJobDetail" /> -->
+<!-- 				<ref bean="yahooCsvFXRatesJobDetail" /> -->
+<!-- 				<ref bean="yahooCsvIndexQuotesJobDetail" /> -->
+<!-- 				<ref bean="yahooCsvStockQuotesJobDetail" /> -->
+<!-- 				<ref bean="ebfCsvHistInterbankRateDataJobDetail" /> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 		<property name="triggers"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="fileCsvExchangesTrigger" /> -->
+<!-- 				<ref bean="fileCsvStocksTrigger" /> -->
+<!-- 				<ref bean="fileCsvIndexInfosTrigger" /> -->
+<!-- 				<ref bean="fileCsvInterbankRatesTrigger" /> -->
+<!-- 				<ref bean="fileCsvHistInterbankRateDataTrigger" /> -->
+<!-- 				<ref bean="yahooCsvFXRatesTrigger" /> -->
+<!-- 				<ref bean="yahooCsvIndexQuotesTrigger" /> -->
+<!-- 				<ref bean="yahooCsvStockQuotesTrigger" /> -->
+<!-- 				<ref bean="ebfCsvHistInterbankRateDataTrigger" /> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+
+</beans>

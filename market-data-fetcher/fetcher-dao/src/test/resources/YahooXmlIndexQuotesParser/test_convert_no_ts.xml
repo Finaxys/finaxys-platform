@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2014-07-23T10:06:55Z" yahoo:lang="en-US">
+    <results>
+        <quote symbol="^GSPC">
+            <Symbol>^GSPC</Symbol>
+            <LastTradePriceOnly>1983.53</LastTradePriceOnly>
+            <Change>+9.90</Change>
+            <Open>1975.65</Open>
+            <DaysHigh>1986.24</DaysHigh>
+            <DaysLow>1975.65</DaysLow>
+            <Volume>425726752</Volume>
+        </quote>
+    </results>
+</query>

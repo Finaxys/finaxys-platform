@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:cloud="http://schema.cloudfoundry.org /spring"
+	xmlns:int-xml="http://www.springframework.org/schema/integration/xml"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd
+		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+		http://schema.cloudfoundry.org /spring 
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring.xsd
+		http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd
+		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- rabbit connection factory, rabbit template, and rabbit admin -->
+	<import
+		resource="classpath:META-INF/spring/service/config/spring-amqp-config-xml.xml" />
+
+
+	<int:channel id="marketData" />
+	<int:channel id="taggedMarketData" />
+	<int:channel id="xmlDocMarketData" />
+	<int:channel id="xmlMarketData" />
+	<int:channel id="splittedMarketData" />
+<!-- 	<int:channel id="transMarketData" /> -->
+	
+<!-- 	<int:channel id="outIn" /> -->
+
+	<int:gateway id="marketDataPublishingGateway"
+		service-interface="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.MarketDataPublishingGateway"
+		default-request-channel="marketData">
+		<int:method name="publishMarketData" request-channel="marketData" />
+	</int:gateway>
+
+	<int:header-enricher input-channel="marketData"
+		output-channel="taggedMarketData">
+		<int:header name="DataType" expression="payload.getList().get(0).getDataType().getName().toLowerCase()" />
+		<int:header name="DataClass" expression="payload.getClass().getSimpleName().toLowerCase()" />
+	</int:header-enricher>
+
+	<int:splitter id="splitter" ref="splitterBean" method="split"
+		input-channel="taggedMarketData" output-channel="splittedMarketData">
+	</int:splitter>
+
+
+	<bean id="splitterBean" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.GenericSplitter">
+		<constructor-arg name="size" value="50" />
+	</bean>
+
+
+
+
+
+	<int-xml:marshalling-transformer id="mdMarshaller"
+		input-channel="splittedMarketData" output-channel="xmlDocMarketData"
+		marshaller="marshaller" result-transformer="resultTransformer" />
+
+	<bean id="resultTransformer"
+		class="org.springframework.integration.xml.transformer.ResultToStringTransformer" />
+
+	<bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="packagesToScan">
+			<list>
+				<value>com.finaxys.finaxysplatform.core.domain</value>
+			</list>
+		</property>
+	</bean>
+
+	<int:header-enricher input-channel="xmlDocMarketData" output-channel="publish-subscribe-channel">
+		<int:header name="contetType" value="application/xml"></int:header>	
+	</int:header-enricher>
+	
+	
+<!-- 	<int-stream:stdout-channel-adapter -->
+<!-- 		id="stdOut" channel="publish-subscribe-channel" append-newline="true" /> -->
+
+	<!-- To send AMQP Messages to an Exchange, configure an outbound-channel-adapter. -->
+	<int-amqp:outbound-channel-adapter
+		channel="publish-subscribe-channel" exchange-name="market-data" header-mapper="headerMapper"
+		routing-key-expression="'marketdata.xml.' + headers.DataType + '.' + headers.DataClass" amqp-template="amqpTemplate" />
+  
+   <bean id="headerMapper" class="org.springframework.integration.amqp.support.DefaultAmqpHeaderMapper">
+                    <property name="requestHeaderNames" value="*"/>
+                    <property name="replyHeaderNames" value="*"/>
+        </bean>
+	<!-- rabbit exchanges, queues, and bindings used by this app -->
+	<rabbit:topic-exchange name="market-data"
+		auto-delete="false" durable="true">
+<!-- 		<rabbit:bindings> -->
+<!-- 			<rabbit:binding queue="all-market-data-xml" pattern="marketdata.*" /> -->
+<!-- 			<rabbit:binding queue="ref-data-xml" pattern="marketdata.xml.ref.*" /> -->
+<!-- 			<rabbit:binding queue="intraday-data-xml" pattern="marketdata.xml.intra.*" /> -->
+<!-- 			<rabbit:binding queue="eod-data-xml" pattern="marketdata.xml.eod.*" /> -->
+<!-- 			<rabbit:binding queue="hist-data-xml" pattern="marketdata.xml.hist.*" /> -->
+<!-- 		</rabbit:bindings> -->
+	</rabbit:topic-exchange>
+
+
+
+<!-- 	<rabbit:queue name="all-market-data-xml" auto-delete="false" -->
+<!-- 		durable="true" /> -->
+<!-- 	<rabbit:queue name="ref-data-xml" auto-delete="false" durable="true" /> -->
+<!-- 	<rabbit:queue name="eod-data-xml" auto-delete="false" -->
+<!-- 		durable="true" /> -->
+<!-- 	<rabbit:queue name="intraday-data-xml" auto-delete="false" durable="true" /> -->
+<!-- 	<rabbit:queue name="hist-data-xml" auto-delete="false" -->
+<!-- 		durable="true" /> -->
+
+	<int:publish-subscribe-channel id="publish-subscribe-channel"></int:publish-subscribe-channel>
+</beans>

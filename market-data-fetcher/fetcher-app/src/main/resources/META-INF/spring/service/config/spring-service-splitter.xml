@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- ///// splitters -->
+
+
+
+<!-- 	<bean id="xmlIndexQuotesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.yahoo.index_quotes.old.quote_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlFXRatesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.yahoo.fx_rates.old.main_rate_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlStockQuotesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.yahoo.stock_quotes.old.quote_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlStocksSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.yahoo.stocks.old.stock_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlOptionsSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" value="${schema.options.option_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlOptionChainsSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.yahoo.option_chains.old.main_option_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlOptionQuotesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" value="${splitter.xml.option_quote}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="xmlCurrencyPairsSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.file.currency_pairs.currency_pair_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlExchangesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.file.exchanges.exchange_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlIndexInfosSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.file.indexes.index_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlInterbankRatesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.file.interbank_rates.rate_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="xmlHistInterbankRatesSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.XmlSplitter"> -->
+<!-- 		<constructor-arg name="element" -->
+<!-- 			value="${converter.file.hist_interbank_rate_data.rate_el}" /> -->
+<!-- 		<property name="maxSize" value="20000" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="csvSplitter" class="com.finaxys.finaxysplatform.marketdatafetcher.splitter.CsvSplitter"> -->
+<!-- 		<property name="maxSize" value="10000" /> -->
+<!-- 	</bean> -->
+
+
+
+</beans>
+
+

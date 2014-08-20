@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2014-07-24T03:14:39Z" yahoo:lang="en-US">
+    <results>
+        <option>
+            <contract>N/A</contract>
+        </option>
+    </results>
+</query>

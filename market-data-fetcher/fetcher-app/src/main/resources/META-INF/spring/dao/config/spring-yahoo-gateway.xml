@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	
+
+	<bean id="yahooXmlFXRateGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooFXRateGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="intradayDataParser" ref="yahooXmlFXRatesParser" />
+			<constructor-arg name="eodDataParser" ref="yahooXmlFXRatesParser" />
+	</bean>
+	<bean id="yahooXmlIndexQuoteGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooIndexQuoteGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="intradayDataParser" ref="yahooXmlIndexQuotesParser" />
+			<constructor-arg name="eodDataParser" ref="yahooXmlIndexQuotesParser" />
+			<constructor-arg name="histDataParser" ref="yahooXmlHistIndexQuotesParser" />
+	</bean>
+	<bean id="yahooXmlStockGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooStockGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="parser" ref="yahooXmlStocksParser" />
+	</bean>
+
+	<bean id="yahooXmlStockQuoteGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooStockQuoteGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="intradayDataParser" ref="yahooXmlStockQuotesParser" />
+			<constructor-arg name="eodDataParser" ref="yahooXmlStockQuotesParser" />
+			<constructor-arg name="histDataParser" ref="yahooXmlHistStockQuotesParser" />
+	</bean>
+
+	<bean id="yahooXmlOptionChainGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooOptionChainGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="parser" ref="yahooXmlOptionChainsParser" />
+	</bean>
+
+	<bean id="yahooXmlOptionQuoteGateway"
+		class="com.finaxys.finaxysplatform.marketdatafetcher.dao.integration.yahoo.YahooOptionQuoteGateway">
+		<constructor-arg name="contentType"
+			value="#{T(com.finaxys.finaxysplatform.core.domain.Enum.ContentType).XML}" />
+			<constructor-arg name="intradayDataParser" ref="yahooXmlOptionQuotesParser" />
+			<constructor-arg name="eodDataParser" ref="yahooXmlOptionQuotesParser" />
+	</bean>
+
+
+
+</beans>

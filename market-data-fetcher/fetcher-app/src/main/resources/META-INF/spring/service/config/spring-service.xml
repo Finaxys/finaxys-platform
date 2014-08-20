@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- /// file xls services -->
+
+<!-- 	<bean id="fileXlsCurrencyPairService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.CurrencyPairServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsCurrencyPairGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlsExchangeService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.ExchangeServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsExchangeGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlsStockService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.StockServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsStockGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlsOptionService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.OptionServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsOptionGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlslIndexService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.IndexServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsIndexGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlsInterbankRateService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.InterbankRateServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="fileXlsInterbankRateGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXlsHistInterbankRateDataService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.HistInterbankRateDataServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" -->
+<!-- 			ref="fileXlsInterbankRateDataGateway" /> -->
+<!-- 	</bean> -->
+
+	<!-- /// yahoo xml services -->
+
+<!-- 	<bean id="yahooXmlFXRateService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.FXRateServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlFXRateGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODFXRateService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.EODFXRateServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlFXRateGateway" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="yahooXmlIndexQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.IndexQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlIndexQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODIndexQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.EODIndexQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlIndexQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlHistIndexQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.HistIndexQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlIndexQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlStockQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.StockQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlStockQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODStockQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.EODStockQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlStockQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlHistStockQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.HistStockQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlStockQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlOptionChainService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.OptionChainServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlOptionChainGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlOptionQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.OptionQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlOptionQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODOptionQuoteService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.EODOptionQuoteServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="yahooXmlOptionQuoteGateway" /> -->
+<!-- 	</bean> -->
+
+	<!-- //// ebf xls services -->
+
+
+<!-- 	<bean id="ebfXlsHistInterbankRateDataService" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.impl.HistInterbankRateDataServiceImpl"> -->
+<!-- 		<constructor-arg name="gateway" ref="ebfXlsInterbankRateDataGateway" /> -->
+<!-- 	</bean> -->
+
+</beans>
+
+

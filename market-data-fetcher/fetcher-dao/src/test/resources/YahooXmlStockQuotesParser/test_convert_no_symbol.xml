@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2014-07-23T13:56:28Z" yahoo:lang="en-US">
+    <results>
+        <quote>
+            <AverageDailyVolume>19698700</AverageDailyVolume>
+            <Change>+0.14</Change>
+            <DaysLow>33.71</DaysLow>
+            <DaysHigh>33.80</DaysHigh>
+            <YearLow>26.75</YearLow>
+            <YearHigh>41.72</YearHigh>
+            <MarketCapitalization>34.236B</MarketCapitalization>
+            <LastTradePriceOnly>33.74</LastTradePriceOnly>
+            <DaysRange>33.71 - 33.80</DaysRange>
+            <Name>Yahoo! Inc.</Name>
+            <Symbol>YHOO</Symbol>
+            <Volume>743201</Volume>
+            <StockExchange>NasdaqNM</StockExchange>
+        </quote>
+    </results>
+</query>

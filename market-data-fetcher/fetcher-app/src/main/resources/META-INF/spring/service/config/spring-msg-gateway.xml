@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+	<!-- /// rmq gateways -->
+
+<!-- 	<bean id="fileXmlCurrencyPairRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.CurrencyPairMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlCurrencyPairService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.currency_pairs}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXmlExchangeRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.ExchangeMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlExchangeService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.exchanges}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXmlStockRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.StockMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlStockService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.stocks}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXmlOptionRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.OptionMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlOptionService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.options}" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="fileXmlIndexInfoRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.IndexInfoMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlIndexInfoService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.indexes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXmlInterbankRateRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.InterbankRateMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileXmlInterbankRateService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.interbank_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileXmlHistInterbankRateDataRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.HistInterbankRateDataMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" -->
+<!-- 			ref="fileXmlHistInterbankRateDataService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.hist_interbank_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlFXRateRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.FXRateMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlFXRateService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.fx_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODFXRateRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.EODFXRateMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlEODFXRateService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.fx_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlIndexQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.IndexQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlIndexQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.index_quotes}" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="yahooXmlEODIndexQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.EODIndexQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlEODIndexQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.index_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlStockQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.StockQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlStockQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.stocks_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODStockQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.EODStockQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlEODStockQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.stocks_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlOptionChainRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.OptionChainMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlOptionChainService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.option_chains}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlOptionQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.OptionQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlOptionQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.option_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooXmlEODOptionQuoteRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.EODOptionQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooXmlEODOptionQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.option_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="ebfXmlHistInterbankRateDataRMQGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.HistInterbankRateDataMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="ebfXmlHistEuriborService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="rmqPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.rabbitmq.routingkey.hist_interbank_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- /// scaled risk gateways --> 
+
+<!-- 	<bean id="fileCsvExchangeScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.ExchangeMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileCsvExchangeService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.exchanges}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvStockScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.StockMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileCsvStockService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.stocks}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvIndexInfoScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.IndexInfoMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileCsvIndexInfoService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.indexes}" /> -->
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="fileCsvInterbankRateScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.InterbankRateMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="fileCsvInterbankRateService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.interbank_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="fileCsvHistInterbankRateDataScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.HistInterbankRateDataMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" -->
+<!-- 			ref="fileCsvHistInterbankRateDataService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.hist_interbank_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvFXRateScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.FXRateMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooCsvFXRateService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.fx_rates}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvIndexQuoteScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.IndexQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooCsvIndexQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.index_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvStockQuoteScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.StockQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooCsvStockQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.stocks_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvOptionChainScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.OptionChainMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooCsvOptionChainService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.option_chains}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="yahooCsvOptionQuoteScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.OptionQuoteMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="yahooCsvOptionQuoteService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.option_quotes}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="ebfCsvHistInterbankRateDataScaledRiskGateway" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.gateway.impl.HistInterbankRateDataMsgGatewayImpl"> -->
+<!-- 		<constructor-arg name="service" ref="ebfCsvHistEuriborService" /> -->
+<!-- 		<constructor-arg name="publisher" ref="scaledRiskPublisher" /> -->
+<!-- 		<constructor-arg name="routingKey" -->
+<!-- 			value="${publisher.scaledrisk.routingkey.hist_interbank_rates}" /> -->
+<!-- 	</bean> -->
+	<!-- // publishers (proxys) -->
+
+<!-- 	<bean id="rmqPublisher" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.publisher.RMQPublisher"> -->
+<!-- 		<property name="connection" ref="connection" /> -->
+<!-- 		<property name="queue" value="${publisher.rabbitmq.queue.direct}" /> -->
+<!-- 		<property name="exchange" value="${publisher.rabbitmq.queue.direct.exchange}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="scaledRiskPublisher" -->
+<!-- 		class="com.finaxys.finaxysplatform.marketdatafetcher.service.integration.publisher.ScaledRiskPublisher" /> -->
+
+
+</beans>
+
+

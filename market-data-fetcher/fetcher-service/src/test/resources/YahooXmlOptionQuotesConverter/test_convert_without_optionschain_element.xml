@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+	yahoo:count="1" yahoo:created="2014-07-27T17:17:37Z" yahoo:lang="en-US">
+	<results>
+			<option symbol="GOOG140920C00265000" type="C">
+				<strikePrice>265</strikePrice>
+				<lastPrice>309.50</lastPrice>
+				<change>0</change>
+				<changeDir />
+				<bid>322</bid>
+				<ask>326.1</ask>
+				<vol>1</vol>
+				<openInt>1</openInt>
+			</option>
+	</results>
+</query>
